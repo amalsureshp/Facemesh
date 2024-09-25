@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <!-- Viewport tag for responsive behavior on mobile devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Face Mesh</title>
+    <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+    <h2>Face Mesh</h2>
+    <div class="controls">
+        <!-- Controls for Worm Start -->
+        <div class="yellow label">Worm start</div>
+        <div class="yellow">
+            <input class="controlItem" id="wormstart" type="number" value="2" min="0" max="468" step="1" />
+        </div>
+
+        <!-- Controls for Worm End -->
+        <div class="yellow label">Worm end</div>
+        <div class="yellow">
+            <input class="controlItem" id="wormend" type="number" value="400" min="0" max="468" step="1" />
+        </div>
+    </div>
+
+    <canvas id="mycanvas" data-scrawl-canvas data-is-responsive="true"></canvas>
+
+    <!-- External JavaScript for MediaPipe and Scrawl Canvas -->
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/face_mesh/face_mesh.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/scrawl-canvas@8.9.4"></script>
+    <!-- Main Script as a Module -->
+    <script type="module" src="./script.js"></script>
+</body>
+</html>
